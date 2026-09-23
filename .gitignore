@@ -1,0 +1,21 @@
+# Local documentation (Indonesian study notes, not published)
+docs/
+
+# Backend secrets
+backend/config/config.php
+
+# Frontend dependencies and build output
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Local environment files (.env.example stays committed)
+.env*.local
+
+# Logs
+npm-debug.log*
+
+# macOS
+.DS_Store
