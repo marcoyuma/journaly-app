@@ -19,3 +19,7 @@ npm-debug.log*
 
 # macOS
 .DS_Store
+
+# Written by `next dev` only when it runs under an AI coding agent
+frontend/AGENTS.md
+frontend/CLAUDE.md
