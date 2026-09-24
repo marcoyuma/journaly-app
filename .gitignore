@@ -1,8 +1,10 @@
-# Local documentation (Indonesian study notes, not published)
-docs/
-
-# Backend secrets
+# Backend secrets (real database password)
 backend/config/config.php
+
+# Backend: Composer packages, PHPUnit cache, runtime data (logs, JSON storage)
+backend/vendor/
+backend/.phpunit.cache/
+backend/storage/
 
 # Frontend dependencies and build output
 node_modules/

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Grader configuration. One testsuite per module: `composer grade 01` runs suite "01". -->
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="../vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="bootstrap.php"
+         cacheDirectory="../.phpunit.cache"
+         colors="true"
+         testdox="true"
+         failOnWarning="true"
+         failOnRisky="true">
+    <testsuites>
+        <testsuite name="00">
+            <directory>Modul00</directory>
+        </testsuite>
+        <testsuite name="01">
+            <directory>Modul01</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

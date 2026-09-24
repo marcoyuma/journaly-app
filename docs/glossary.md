@@ -1,0 +1,27 @@
+# Glosarium
+
+Semua istilah teknis proyek ini, urut alfabet. Setiap istilah ditautkan ke modul tempat ia pertama kali diajarkan. Daftar ini bertambah di akhir setiap modul.
+
+- **Branch** (cabang: jalur kerja git terpisah dengan riwayat commit sendiri; di proyek ini `feat/NN-nama` per modul). [Modul 00](./modules/00-persiapan.md#konsep-4-commit-dan-branch-fitur)
+- **Commit** (satu titik simpan di git beserta pesannya, dibuat dengan `git add` lalu `git commit`). [Modul 00](./modules/00-persiapan.md#konsep-4-commit-dan-branch-fitur)
+- **Composer** (pengelola paket PHP: mengunduh kode yang dibutuhkan proyek berdasarkan `composer.json`). [Modul 00](./modules/00-persiapan.md#konsep-1-composer-dan-composerjson)
+- **`composer.json`** (file yang mencatat paket dan versi yang dibutuhkan proyek, serta perintah pendek seperti `grade`). [Modul 00](./modules/00-persiapan.md#konsep-1-composer-dan-composerjson)
+- **`composer.lock`** (catatan versi persis semua paket yang terpasang; di-commit supaya instalasi selalu sama). [Modul 00](./modules/00-persiapan.md#konsep-2-composer-install)
+- **`echo`** (perintah PHP untuk mencetak teks, persis tanpa baris baru otomatis). [Modul 01](./modules/01-program-php-pertama.md#konsep-1-skrip-php-pertama)
+- **Escape sequence** (kombinasi karakter di string petik dua yang berarti karakter khusus, misalnya `\n` untuk baris baru). [Modul 01](./modules/01-program-php-pertama.md#konsep-3-string-petik-dua-dan-petik-satu)
+- **Grader** (test pemeriksa latihan di `backend/grader/`, ditulis mentor, dijalankan dengan `composer grade NN`). [Modul 00](./modules/00-persiapan.md#konsep-3-grader)
+- **Interpolasi** (menyisipkan nilai variabel ke dalam string petik dua, misalnya `"Judul: {$title}"`). [Modul 01](./modules/01-program-php-pertama.md#konsep-3-string-petik-dua-dan-petik-satu)
+- **Komentar** (baris diawali `//` yang dilewati PHP; catatan untuk manusia). [Modul 01](./modules/01-program-php-pertama.md#konsep-1-skrip-php-pertama)
+- **`main`** (branch utama yang selalu berisi pekerjaan yang sudah selesai). [Modul 00](./modules/00-persiapan.md#konsep-4-commit-dan-branch-fitur)
+- **Merge** (menggabungkan commit dari satu branch ke branch lain). [Modul 00](./modules/00-persiapan.md#konsep-4-commit-dan-branch-fitur)
+- **Parse error** (PHP tidak bisa membaca kode karena tata tulisnya salah; tidak ada baris yang dijalankan). [Modul 01](./modules/01-program-php-pertama.md#konsep-1-skrip-php-pertama)
+- **`<?php`** (tag pembuka: tanda mulainya kode PHP; teks sebelum tag ini dicetak apa adanya). [Modul 01](./modules/01-program-php-pertama.md#konsep-1-skrip-php-pertama)
+- **PHPUnit** (alat untuk menjalankan test PHP; dipakai grader). [Modul 00](./modules/00-persiapan.md#konsep-1-composer-dan-composerjson)
+- **`require-dev`** (bagian `composer.json` untuk alat yang hanya dipakai saat belajar dan mengetes, bukan saat aplikasi berjalan). [Modul 00](./modules/00-persiapan.md#konsep-1-composer-dan-composerjson)
+- **Skrip PHP** (file teks berakhiran `.php` yang dijalankan program `php` dari atas ke bawah). [Modul 01](./modules/01-program-php-pertama.md#konsep-1-skrip-php-pertama)
+- **String** (data berupa teks, ditulis di antara tanda petik satu atau petik dua). [Modul 01](./modules/01-program-php-pertama.md#konsep-1-skrip-php-pertama)
+- **Terminal** (aplikasi berbasis teks untuk menjalankan perintah). [Modul 00](./modules/00-persiapan.md#pemanasan)
+- **Variabel** (nama diawali `$` yang menyimpan sebuah nilai; peka huruf besar kecil). [Modul 01](./modules/01-program-php-pertama.md#konsep-2-variabel)
+- **`vendor/`** (folder tempat Composer menaruh paket yang diunduh; tidak di-commit). [Modul 00](./modules/00-persiapan.md#konsep-2-composer-install)
+- **Warning** (peringatan PHP: skrip tetap berjalan tapi ada yang salah, misalnya variabel yang belum diisi; grader menganggapnya gagal). [Modul 01](./modules/01-program-php-pertama.md#konsep-2-variabel)
+- **zsh** (shell di terminal Mac; menampilkan `%` yang disorot bila output tidak diakhiri baris baru). [Modul 01](./modules/01-program-php-pertama.md#konsep-1-skrip-php-pertama)
