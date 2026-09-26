@@ -37,16 +37,16 @@ Urutannya linear: setiap modul memakai hasil modul sebelumnya.
 |---|---|---|---|
 | 00 | [Persiapan](./00-persiapan.md) | Composer dan `composer.json`, `composer install` (`vendor/`, `composer.lock`), grader `composer grade NN`, branch fitur (`git switch -c`, `git merge`, `git branch -d`) | Grader 00 hijau, commit pertama Anda |
 | 01 | [Program PHP pertama](./01-program-php-pertama.md) | `php nama-file.php`, tag `<?php`, `echo` dan `;`, variabel `$nama = nilai;`, string petik dua (`{$var}`, `\n`) dibanding petik satu | |
-| 02 | Tipe, kondisi, fungsi | `declare(strict_types=1)`, tipe `int`/`string`/`bool`/`null`, `if`/`else` dengan `===`, fungsi bertipe (`function f(int $x): string`), `TypeError` | |
-| 03 | Array | array list `[a, b]`, array asosiatif `['k' => v]`, `foreach`, `count`, `json_encode` | |
+| 02 | [Tipe, kondisi, fungsi](./02-tipe-kondisi-fungsi.md) | tipe `int`/`string`/`bool`/`null`, `var_dump`, `if`/`else` dengan `===`, fungsi bertipe (`function f(int $x): string`, `?string`), `declare(strict_types=1)` dan `TypeError` | |
+| 03 | [Array](./03-array.md) | array list `[a, b]` (dan tipe `array`), array asosiatif `['k' => v]`, `foreach`, `count`, `json_encode` | |
 
 ### B. HTTP tanpa database
 
 | No | Modul | Hal baru (≤5) | Milestone dan utang |
 |---|---|---|---|
-| 04 | HTTP dan server bawaan PHP | request dan response, `php -S`, `curl -i`, status code, header | Grader mulai menguji lewat HTTP |
-| 05 | Membaca request | `$_SERVER['REQUEST_METHOD']`, `$_SERVER['REQUEST_URI']`, `parse_url`, `$_GET`, `http_response_code` | |
-| 06 | Response JSON | `header()`, `json_encode` dengan flag, pembungkus `{data}`/`{error}`, `201`, `204` | |
+| 04 | [HTTP dan server bawaan PHP](./04-http-server-bawaan.md) | request dan response (status code, header), `php -S`, `curl -i`, `http_response_code`, `header()` | Grader mulai menguji lewat HTTP |
+| 05 | [Membaca request](./05-membaca-request.md) | `$_SERVER['REQUEST_METHOD']` dan `REQUEST_URI`, `curl -X`, `parse_url`, `$_GET`, `??` | |
+| 06 | Response JSON | `Content-Type: application/json`, `json_encode` dengan flag, pembungkus `{data}`/`{error}`, `201`, `204` | |
 | 07 | Front controller dan routing | `public/index.php` sebagai front controller, `match`, `require`, `exit`, `405` | Branch fitur pertama di aplikasi. Utang: `require` manual (dilunasi di 29) |
 | 08 | Route parameter | `preg_match` untuk satu pola `#^/journals/(\d+)$#`, `$matches`, cast `(int)`, `404` | |
 | 09 | Body JSON | `php://input` dengan `file_get_contents`, `json_decode` dengan `JSON_THROW_ON_ERROR`, `try`/`catch`, `400`, `415` | |

@@ -15,5 +15,17 @@
         <testsuite name="01">
             <directory>Modul01</directory>
         </testsuite>
+        <testsuite name="02">
+            <directory>Modul02</directory>
+        </testsuite>
+        <testsuite name="03">
+            <directory>Modul03</directory>
+        </testsuite>
+        <testsuite name="04">
+            <directory>Modul04</directory>
+        </testsuite>
+        <testsuite name="05">
+            <directory>Modul05</directory>
+        </testsuite>
     </testsuites>
 </phpunit>

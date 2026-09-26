@@ -32,11 +32,19 @@ Kolom "Status":
 | Variabel `$nama = nilai;`, peka huruf besar kecil | 01 | Diajarkan |
 | String petik dua, interpolasi `{$nama}`, `\n` | 01 | Diajarkan |
 | Parse error, Warning "Undefined variable" | 01 | Diajarkan (cara membaca) |
-| `declare(strict_types=1)`, tipe `int`/`string`/`bool`/`null` | 02 | Terjadwal |
-| `if`/`else`, `===` | 02 | Terjadwal |
-| Fungsi bertipe, `return`, `TypeError` | 02 | Terjadwal |
-| Array list, array asosiatif, `foreach`, `count` | 03 | Terjadwal |
-| `json_encode` | 03 | Terjadwal (flag di 06) |
+| Tipe `int`/`string`/`bool`/`null`, `true`/`false` | 02 | Diajarkan |
+| `var_dump` | 02 | Diajarkan |
+| `===`, `if`/`else`, blok `{ }` | 02 | Diajarkan (`==` tidak dipakai) |
+| Fungsi bertipe (`function f(int $x): string`), parameter, `return`, tipe nullable `?string`/`?int` | 02 | Diajarkan |
+| `declare(strict_types=1)`, `TypeError`, membaca stack trace | 02 | Diajarkan |
+| Array list `[...]`, indeks dari 0, `$list[] = ...`, array kosong `[]`, tipe `array` | 03 | Diajarkan |
+| Array asosiatif `['k' => v]`, `$arr['k']`, `{$arr['k']}` di string petik dua | 03 | Diajarkan |
+| `foreach ($list as $item)`, `count` | 03 | Diajarkan |
+| Scope: variabel di dalam fungsi terpisah dari luar | 03 | Diajarkan |
+| JSON, `json_encode` | 03 | Diajarkan (flag di 06) |
+| Warning "Undefined array key", "Array to string conversion" | 03 | Diajarkan (cara membaca) |
+| Konstanta (contoh: `PHP_URL_PATH`) | 05 | Diajarkan (sebatas memakai) |
+| `??` (null coalescing) | 05 | Diajarkan |
 | `match` | 07 | Terjadwal |
 | `require` | 07 | Terjadwal (dilunasi oleh autoload di 29) |
 | `exit` | 07 | Terjadwal |
@@ -55,10 +63,17 @@ Kolom "Status":
 
 | Konsep | Diajarkan di | Status |
 |---|---|---|
-| Request, response, status code, header | 04 | Terjadwal |
-| `php -S`, `curl -i` | 04 | Terjadwal |
-| `$_SERVER['REQUEST_METHOD']`, `$_SERVER['REQUEST_URI']`, `parse_url`, `$_GET`, `http_response_code` | 05 | Terjadwal |
-| `header()`, pembungkus `{data}`/`{error}`, 201, 204 | 06 | Terjadwal |
+| HTTP, klien dan server, request (method, path, header) dan response (status line, header, body) | 04 | Diajarkan |
+| Status code 200, 401, 404, 500, 503 dan kelompok 2xx/4xx/5xx | 04 | Diajarkan |
+| `php -S localhost:8001 file.php`, port, Ctrl+C | 04 | Diajarkan |
+| `curl`, `curl -i` | 04 | Diajarkan |
+| `http_response_code` | 04 | Diajarkan |
+| `header()`, `Content-Type` (`text/plain`, `text/html`), `charset=UTF-8`, `Retry-After` | 04 | Diajarkan |
+| Superglobal, `$_SERVER['REQUEST_METHOD']`, `$_SERVER['REQUEST_URI']` | 05 | Diajarkan |
+| `curl -X`, method `GET`/`POST`/`PUT`/`DELETE` | 05 | Diajarkan |
+| URI, query string, `parse_url($uri, PHP_URL_PATH)` | 05 | Diajarkan |
+| `$_GET` (nilai selalu string) | 05 | Diajarkan |
+| `Content-Type: application/json`, pembungkus `{data}`/`{error}`, 201, 204 | 06 | Terjadwal |
 | Front controller `public/index.php`, 405 | 07 | Terjadwal |
 | Route parameter, 404 | 08 | Terjadwal |
 | `php://input`, 400, 415 | 09 | Terjadwal |

@@ -12,3 +12,6 @@ require __DIR__ . '/Support/CliResult.php';
 require __DIR__ . '/Support/Cli.php';
 require __DIR__ . '/Support/LearnerFile.php';
 require __DIR__ . '/Support/Git.php';
+require __DIR__ . '/Support/LearnerFunction.php';
+require __DIR__ . '/Support/HttpResponse.php';
+require __DIR__ . '/Support/Server.php';

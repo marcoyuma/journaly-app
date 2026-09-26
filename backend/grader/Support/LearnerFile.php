@@ -49,6 +49,47 @@ final class LearnerFile
         );
     }
 
+    public static function assertDeclaresStrictTypes(string $source, string $relativePath): void
+    {
+        $code = [];
+
+        foreach (token_get_all($source) as $token) {
+            if (is_array($token) && in_array($token[0], [T_WHITESPACE, T_COMMENT, T_DOC_COMMENT, T_OPEN_TAG], true)) {
+                continue;
+            }
+
+            $code[] = is_array($token) ? $token[1] : $token;
+
+            if (count($code) === 7) {
+                break;
+            }
+        }
+
+        Assert::assertTrue(
+            implode('', $code) === 'declare(strict_types=1);',
+            "Kontrak meminta {$relativePath} diawali declare(strict_types=1); tepat di bawah <?php.",
+        );
+    }
+
+    public static function assertCallsFunction(string $source, string $function, string $reason): void
+    {
+        $tokens = array_values(array_filter(
+            token_get_all($source),
+            static fn ($token): bool => !is_array($token) || $token[0] !== T_WHITESPACE,
+        ));
+        $found = false;
+
+        foreach ($tokens as $index => $token) {
+            if (is_array($token) && $token[0] === T_STRING && strtolower($token[1]) === $function
+                && ($tokens[$index + 1] ?? null) === '(') {
+                $found = true;
+                break;
+            }
+        }
+
+        Assert::assertTrue($found, "Kontrak meminta pemanggilan {$function}(). {$reason}");
+    }
+
     public static function assertTextAppearsOnce(string $source, string $text, string $reason): void
     {
         Assert::assertSame(

@@ -92,7 +92,7 @@ Grader adalah test PHPUnit yang ditulis mentor di `backend/grader/` untuk memeri
 - `composer grade NN` menjalankan testsuite modul `NN`.
 - Grader memeriksa dari luar saja: output skrip terminal, status HTTP, header, dan JSON. Ia tidak memeriksa cara Anda menulis kode, kecuali yang diminta kontrak latihan (misalnya "harus memakai variabel `$title`").
 - Skrip dijalankan dengan `display_errors=stderr`, sehingga warning PHP dilaporkan terpisah dan membuat test merah.
-- Mulai Modul 04, grader menyalakan `php -S` sendiri di port acak lalu mengirim request dengan ext-curl. Mulai Modul 13, grader menyiapkan `journaly_test` dari file SQL milik Anda.
+- Mulai Modul 04, grader menyalakan `php -S` sendiri di port acak lalu mengirim request dengan ext-curl. Server grader memakai `display_errors=0` dan mencatat error ke file sementara, sehingga warning tidak tercampur ke body dan tetap membuat test merah. Mulai Modul 13, grader menyiapkan `journaly_test` dari file SQL milik Anda.
 
 ## 6. Matriks versi
 
